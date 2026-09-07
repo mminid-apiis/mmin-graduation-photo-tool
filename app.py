@@ -3,11 +3,12 @@ import streamlit as st
 from lib.apps_script_client import check_email, submit_photo
 from lib.config import BASE_DIR
 from lib.i18n import LANGUAGES, get_lang, t
-from lib.theme import apply_theme, is_dark
+from lib.theme import apply_theme, is_dark, render_logo_header
 from lib.utils import safe_filename, validate_photo
 
 st.set_page_config(page_title="Graduation Photo Upload", page_icon="🎓", layout="centered")
 apply_theme()
+render_logo_header(t("brand_tagline"))
 
 lang_col, theme_col = st.columns([2, 1])
 with lang_col:

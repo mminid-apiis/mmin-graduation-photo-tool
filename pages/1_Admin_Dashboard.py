@@ -9,8 +9,11 @@ from lib.apps_script_client import (
     remove_whitelist,
 )
 from lib.config import SPREADSHEET_URL
+from lib.theme import apply_theme, render_logo_header
 
 st.set_page_config(page_title="Admin - Graduation Photos", page_icon="🗂️", layout="wide")
+apply_theme(wide=True)
+render_logo_header("Admin Dashboard")
 
 st.title("🗂️ Admin Dashboard — Graduation Photo Upload")
 
