@@ -79,7 +79,7 @@ Kesalahan penulisan nama menjadi tanggung jawab mahasiswa.
         "theme_label": "Tampilan",
         "theme_light": "☀️ Terang",
         "theme_dark": "🌙 Gelap",
-        "brand_tagline": "MMin Indonesia — Graduation Program",
+        "brand_tagline": "21st Century Training. For Christians. For Free",
     },
     "en": {
         "app_title": "🎓 Graduation Photo Upload",
@@ -153,7 +153,7 @@ capitalization). Any spelling mistakes are the student's own responsibility.
         "theme_label": "Appearance",
         "theme_light": "☀️ Light",
         "theme_dark": "🌙 Dark",
-        "brand_tagline": "MMin Indonesia — Graduation Program",
+        "brand_tagline": "21st Century Training. For Christians. For Free",
     },
     "zh": {
         "app_title": "🎓 毕业照片上传",
@@ -202,7 +202,7 @@ capitalization). Any spelling mistakes are the student's own responsibility.
         "theme_label": "外观",
         "theme_light": "☀️ 浅色",
         "theme_dark": "🌙 深色",
-        "brand_tagline": "MMin Indonesia — 毕业项目",
+        "brand_tagline": "21st Century Training. For Christians. For Free",
     },
 }
 

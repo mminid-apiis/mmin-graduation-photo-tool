@@ -70,12 +70,13 @@ def _build_css(dark: bool, wide: bool) -> str:
         margin: 1.5rem 0 2rem 0;
     }}
     .brand-header img {{
-        width: 96px;
+        width: 340px;
+        max-width: 80%;
     }}
     .brand-header .brand-tagline {{
         color: rgba(255, 255, 255, 0.85) !important;
-        font-size: 0.85rem;
-        margin-top: 0.4rem;
+        font-size: 0.95rem;
+        margin-top: 0.6rem;
     }}
 
     /* The bordered container (st.container(border=True)) is styled as the card */
