@@ -42,7 +42,7 @@ with st.expander(t("guide_title"), expanded=True):
         st.caption(t("example_caption"))
         cols = st.columns(len(example_photos))
         for col, photo_path in zip(cols, example_photos):
-            col.image(str(photo_path), use_container_width=True)
+            col.image(str(photo_path), width="stretch")
 
 email = st.text_input(t("email_label"), placeholder=t("email_placeholder")).strip().lower()
 
@@ -79,7 +79,7 @@ if uploaded_file:
 
 st.divider()
 
-if st.button(t("upload_button"), type="primary", use_container_width=True):
+if st.button(t("upload_button"), type="primary", width="stretch"):
     errors = []
     if not nama:
         errors.append(t("error_nama_required"))

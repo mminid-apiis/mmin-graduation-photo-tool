@@ -38,7 +38,7 @@ if not st.session_state.admin_authed:
 
 top_left, top_right = st.columns([6, 1])
 with top_right:
-    if st.button("Logout", use_container_width=True):
+    if st.button("Logout", width="stretch"):
         st.session_state.admin_authed = False
         st.rerun()
 
@@ -191,7 +191,7 @@ with tab_table:
         )
         st.dataframe(
             df_view,
-            use_container_width=True,
+            width="stretch",
             hide_index=True,
             column_config={
                 "Link Foto": st.column_config.LinkColumn("Link Foto", display_text="Buka")
@@ -223,11 +223,11 @@ with tab_gallery:
             for col, s in zip(cols, row):
                 with col:
                     if s["thumbnail_link"]:
-                        st.image(s["thumbnail_link"], use_container_width=True)
+                        st.image(s["thumbnail_link"], width="stretch")
                     nama = s["nama_submitted"] or s["nama_whitelist"] or "-"
                     st.caption(f"**{nama}**\n\n{s['email']}")
-                    st.link_button("Buka di Drive", s["drive_link"], use_container_width=True)
-                    if st.button("Hapus", key=f"del_{s['email']}", use_container_width=True):
+                    st.link_button("Buka di Drive", s["drive_link"], width="stretch")
+                    if st.button("Hapus", key=f"del_{s['email']}", width="stretch"):
                         try:
                             delete_report_row(s["email"])
                             st.rerun()
