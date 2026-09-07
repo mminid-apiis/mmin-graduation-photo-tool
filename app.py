@@ -31,6 +31,7 @@ with theme_col:
 
 st.title(t("app_title"))
 st.write(t("app_subtitle"))
+st.caption(t("privacy_notice"))
 
 with st.expander(t("guide_title"), expanded=True):
     st.markdown(t("guide_body"))

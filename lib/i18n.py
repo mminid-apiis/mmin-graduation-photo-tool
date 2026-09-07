@@ -13,6 +13,11 @@ _TRANSLATIONS = {
             "Unggah foto Anda untuk keperluan **Graduation Slides**. "
             "Baca dulu panduan di bawah ini sebelum mengisi form."
         ),
+        "privacy_notice": (
+            "🔒 Data (nama, email, dan foto) yang Anda kirimkan hanya digunakan oleh "
+            "panitia untuk keperluan administrasi wisuda (Graduation Slides) dan tidak "
+            "dibagikan ke pihak lain."
+        ),
         "guide_title": "📋 Panduan Sebelum Upload — WAJIB DIBACA",
         "guide_body": """
 **1. Email**
@@ -81,6 +86,11 @@ Kesalahan penulisan nama menjadi tanggung jawab mahasiswa.
             "Upload your photo for the **Graduation Slides**. "
             "Please read the instructions below before filling out the form."
         ),
+        "privacy_notice": (
+            "🔒 The data you submit (name, email, and photo) is only used by the "
+            "committee for graduation administration (Graduation Slides) and is not "
+            "shared with any other party."
+        ),
         "guide_title": "📋 Instructions Before Uploading — MUST READ",
         "guide_body": """
 **1. Email**
@@ -146,6 +156,7 @@ capitalization). Any spelling mistakes are the student's own responsibility.
     "zh": {
         "app_title": "🎓 毕业照片上传",
         "app_subtitle": "请上传您的照片，用于**毕业典礼幻灯片**。请先阅读下方说明，再填写表单。",
+        "privacy_notice": "🔒 您提交的数据（姓名、电子邮箱和照片）仅供工作组用于毕业典礼行政事务（毕业典礼幻灯片），不会分享给其他任何一方。",
         "guide_title": "📋 上传前须知——必读",
         "guide_body": """
 **1. 电子邮箱**
