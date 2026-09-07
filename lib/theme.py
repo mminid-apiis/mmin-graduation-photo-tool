@@ -1,4 +1,4 @@
-import base64
+﻿import base64
 
 import streamlit as st
 
@@ -16,20 +16,20 @@ def _build_css(dark: bool, wide: bool) -> str:
         text_color = "#f0f2f5"
         input_bg = "#1e2940"
         input_border = "#334166"
-        subtle_text = "#9aa8c0"
     else:
         card_bg = "#ffffff"
         text_color = "#1a2233"
         input_bg = "#f5f7fa"
         input_border = "#d0d7e2"
-        subtle_text = "#5b6b7c"
 
     max_width = "1100px" if wide else "700px"
 
     alert_overrides = ""
     if dark:
         alert_overrides = """
-        [data-testid="stAlert"] { background-color: #1f2a40 !important; }
+        .st-key-brand_card [data-testid="stAlert"] {
+            background-color: #1f2a40 !important;
+        }
         [data-testid="stAlertContentSuccess"], [data-testid="stAlertContentSuccess"] * {
             color: #6fe3a1 !important;
         }
@@ -60,69 +60,91 @@ def _build_css(dark: bool, wide: bool) -> str:
     }}
     .block-container {{
         max-width: {max_width};
-        margin: 2rem auto 3rem auto;
-        background: {card_bg};
-        border-radius: 20px;
-        padding: 2.5rem 2.5rem 2rem 2.5rem;
-        box-shadow: 0 25px 70px rgba(0,0,0,0.45);
+        margin: 1rem auto 3rem auto;
+        background: transparent !important;
     }}
-    h1, h2, h3, h4, h5, h6, p, span, label, li,
-    [data-testid="stMarkdownContainer"], [data-testid="stCaptionContainer"] {{
-        color: {text_color} !important;
-    }}
+
+    /* Logo + tagline sit directly on the gradient, outside the card */
     .brand-header {{
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin: 1.5rem 0 2rem 0;
     }}
     .brand-header img {{
-        width: 88px;
+        width: 96px;
     }}
     .brand-header .brand-tagline {{
-        color: {subtle_text} !important;
+        color: rgba(255, 255, 255, 0.85) !important;
         font-size: 0.85rem;
-        margin-top: 0.35rem;
+        margin-top: 0.4rem;
     }}
-    [data-testid="stExpander"] {{
+
+    /* The bordered container (st.container(border=True)) is styled as the card */
+    .st-key-brand_card {{
+        background: {card_bg} !important;
+        border-radius: 20px !important;
+        border: none !important;
+        box-shadow: 0 25px 70px rgba(0,0,0,0.45) !important;
+        padding: 2.5rem 2.5rem 2rem 2.5rem !important;
+    }}
+    .st-key-brand_card h1,
+    .st-key-brand_card h2,
+    .st-key-brand_card h3,
+    .st-key-brand_card h4,
+    .st-key-brand_card h5,
+    .st-key-brand_card h6,
+    .st-key-brand_card p,
+    .st-key-brand_card span,
+    .st-key-brand_card label,
+    .st-key-brand_card li,
+    .st-key-brand_card [data-testid="stMarkdownContainer"],
+    .st-key-brand_card [data-testid="stCaptionContainer"] {{
+        color: {text_color} !important;
+    }}
+    .st-key-brand_card [data-testid="stExpander"] {{
         background-color: {input_bg} !important;
         border-color: {input_border} !important;
         border-radius: 10px !important;
     }}
-    [data-testid="stExpander"] summary,
-    [data-testid="stExpander"] summary span,
-    [data-testid="stExpander"] summary p,
-    [data-testid="stExpander"] div[data-testid="stExpanderDetails"] {{
+    .st-key-brand_card [data-testid="stExpander"] summary,
+    .st-key-brand_card [data-testid="stExpander"] summary span,
+    .st-key-brand_card [data-testid="stExpander"] summary p,
+    .st-key-brand_card [data-testid="stExpander"] div[data-testid="stExpanderDetails"] {{
         background-color: {input_bg} !important;
         color: {text_color} !important;
     }}
-    .stTextInput input, .stTextArea textarea, [data-baseweb="select"] > div {{
+    .st-key-brand_card .stTextInput input,
+    .st-key-brand_card .stTextArea textarea,
+    .st-key-brand_card [data-baseweb="select"] > div {{
         background-color: {input_bg} !important;
         color: {text_color} !important;
         border-color: {input_border} !important;
         border-radius: 8px !important;
     }}
-    [data-testid="stFileUploaderDropzone"] {{
+    .st-key-brand_card [data-testid="stFileUploaderDropzone"] {{
         background-color: {input_bg} !important;
         border-color: {input_border} !important;
         border-radius: 8px !important;
     }}
-    [data-testid="stFileUploaderDropzone"] * {{
+    .st-key-brand_card [data-testid="stFileUploaderDropzone"] * {{
         color: {text_color} !important;
     }}
-    button {{
+    .st-key-brand_card button {{
         border-radius: 8px !important;
     }}
-    button[kind="primary"], [data-testid="baseButton-primary"] {{
+    .st-key-brand_card button[kind="primary"],
+    .st-key-brand_card [data-testid="baseButton-primary"] {{
         background-color: {_ACCENT} !important;
         color: #ffffff !important;
         border-color: {_ACCENT} !important;
     }}
-    a, a:visited {{
+    .st-key-brand_card a,
+    .st-key-brand_card a:visited {{
         color: {_ACCENT} !important;
     }}
-    [data-testid="stAlert"] {{
+    .st-key-brand_card [data-testid="stAlert"] {{
         border-radius: 10px !important;
     }}
-    hr {{
+    .st-key-brand_card hr {{
         border-color: {input_border} !important;
     }}
     {alert_overrides}

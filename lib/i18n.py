@@ -8,17 +8,17 @@ LANGUAGES = {
 
 _TRANSLATIONS = {
     "id": {
-        "app_title": "🎓 Upload Foto Graduation",
+        "app_title": "🎓 Unggah Foto Wisuda",
         "app_subtitle": (
-            "Unggah foto Anda untuk keperluan **Graduation Slides**. "
-            "Baca dulu panduan di bawah ini sebelum mengisi form."
+            "Unggah foto Anda untuk keperluan **Salindia Wisuda**. "
+            "Baca dulu panduan di bawah ini sebelum mengisi formulir."
         ),
         "privacy_notice": (
             "🔒 Data (nama, email, dan foto) yang Anda kirimkan hanya digunakan oleh "
-            "panitia untuk keperluan administrasi wisuda (Graduation Slides) dan tidak "
+            "panitia untuk keperluan administrasi wisuda (Salindia Wisuda) dan tidak "
             "dibagikan ke pihak lain."
         ),
-        "guide_title": "📋 Panduan Sebelum Upload — WAJIB DIBACA",
+        "guide_title": "📋 Panduan Sebelum Mengunggah — WAJIB DIBACA",
         "guide_body": """
 **1. Email**
 Gunakan email yang **sama persis** seperti saat pendaftaran program MMin
