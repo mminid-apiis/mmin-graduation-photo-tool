@@ -22,7 +22,7 @@ def _build_css(dark: bool, wide: bool) -> str:
         input_bg = "#f5f7fa"
         input_border = "#d0d7e2"
 
-    max_width = "1100px" if wide else "700px"
+    max_width = "1100px" if wide else "900px"
 
     alert_overrides = ""
     if dark:
